@@ -1,0 +1,231 @@
+@import url("animations.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1a1a2e;
+}
+
+.game {
+  position: relative;
+  padding: 2rem;
+  max-width: 50rem;
+  margin: auto;
+  background-color: rgb(48, 48, 128);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  color: rgb(227, 220, 235);
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.score h2 {
+  font-size: 1.5rem;
+}
+
+.score p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  align-self: center;
+  padding-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  color: rgb(227, 220, 235);
+  text-align: center;
+}
+
+.intro-button,
+.match button {
+  background: rgb(18, 114, 106);
+  padding: 1rem 2rem;
+  border: none;
+  color: rgb(227, 220, 235);
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.match {
+  transition: opacity 0.5s ease 0.5s;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.intro.fadeOut {
+  display: none;
+}
+
+.match.fadeOut {
+  display: none;
+}
+
+.match.fadeIn {
+  display: block;
+}
+
+.winner {
+  color: rgb(167, 164, 172);
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.hands img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.hands,
+.hand-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.option-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.hand-labels {
+  text-align: center;
+  color: rgb(167, 164, 172);
+  font-size: 1rem;
+}
+
+/* Tablet and desktop styles */
+@media screen and (min-width: 768px) {
+  .game {
+    padding: 2rem 4rem;
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
+    min-height: 45rem;
+  }
+
+  .score h2 {
+    font-size: 2rem;
+  }
+
+  .score p {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 8rem;
+  }
+
+  .intro-button,
+  .match button {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+
+  .winner {
+    font-size: 2rem;
+    margin: 3rem;
+  }
+
+  .hands img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .hand-labels {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 767px) {
+  .game {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .match {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .option-buttons {
+    flex-wrap: wrap;
+  }
+
+  .intro {
+    padding-bottom: .5rem;
+    margin-bottom: 0;
+  }
+
+  .intro-button,
+  .match button {
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .hands img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .option-buttons button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
