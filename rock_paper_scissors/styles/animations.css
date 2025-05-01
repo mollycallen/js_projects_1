@@ -1,0 +1,61 @@
+.player-hand {
+    transform: rotate(90deg);
+}
+
+.computer-hand {
+    transform: rotate(-90deg) scaleX(-1);
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakeComputer {
+    0% {
+        transform: rotate(-90deg) scaleX(-1) translate(0px);
+    }
+
+    25% {
+        transform: rotate(-90deg) scaleX(-1) translateX(-20px);
+    }
+
+    50% {
+        transform: rotate(-90deg) scaleX(-1) translateX(0px);
+    }
+
+    75% {
+        transform: rotate(-90deg) scaleX(-1) translateX(-20px);
+    }
+
+    100% {
+        transform: rotate(-90deg) scaleX(-1) translateX(0px);
+    }
+}
+
+@keyframes shakePlayer {
+    0% {
+        transform: rotate(90deg) translate(0px);
+    }
+
+    25% {
+        transform: rotate(90deg) translateX(-20px);
+    }
+
+    50% {
+        transform: rotate(90deg) translateX(0px);
+    }
+
+    75% {
+        transform: rotate(90deg) translateX(-20px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(0px);
+    }
+}
